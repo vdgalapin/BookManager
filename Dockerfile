@@ -15,4 +15,4 @@ RUN mvn clean package -DskipTests
 
 
 # Run the app
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["sh", "-c", "java -jar target/*.jar"]
