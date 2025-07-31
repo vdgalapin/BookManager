@@ -1,6 +1,9 @@
 # Use Java 17 as base image
 FROM eclipse-temurin:17-jdk
 
+# Install Maven manually
+RUN apt-get update && apt-get install -y maven
+
 # Set working directory
 WORKDIR /app
 
