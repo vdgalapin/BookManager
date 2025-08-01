@@ -10,6 +10,9 @@ public class Book {
     private Long id;
     private String title;
     private String author;
+
+    // hibernate converts camelCase field names like datePublished into snake_case (date_published) 
+    @Column(name = "datepublished") 
     private String datePublished;
 
     // Getters and Setters
