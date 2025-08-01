@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", loadBooks);
 
+const API_BASE_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:8080"
+    : "https://bookmanager-xmhg.onrender.com";
+
 document.getElementById("bookForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const datePublished = document.getElementById("datePublished").value;
 
-    fetch("/books", {
+    fetch(`${API_BASE_URL}/books`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
