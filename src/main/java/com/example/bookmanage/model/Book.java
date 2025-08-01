@@ -37,11 +37,11 @@ public class Book {
         this.author = author;
     }
 
-    public String getPublishedDate() {
+    public String getDatePublished() {
         return datePublished;
     }
 
-    public void setPublishedDate(String datePublished) {
+    public void setDatePublished(String datePublished) {
         this.datePublished = datePublished;
     }
 }
